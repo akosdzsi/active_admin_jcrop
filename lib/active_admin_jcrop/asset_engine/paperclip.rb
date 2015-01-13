@@ -5,8 +5,12 @@ module ActiveAdminJcrop
         obj.send(field).styles.keys
       end
 
-      def crop!(obj, field)
-        obj.send(field).reprocess!
+      def crop!(obj, field, style_to_crop=nil)
+        if style_to_crop.to_s==''
+          obj.send(field).reprocess!
+        else
+          obj.send(field).reprocess! style_to_crop
+        end
       end
     end
   end

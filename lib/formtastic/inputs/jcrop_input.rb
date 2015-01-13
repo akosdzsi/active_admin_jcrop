@@ -26,7 +26,7 @@ module Formtastic
 
       def jcrop_feature
         if @object.send(method).present?
-          template.render(partial: "active_admin_jcrop/jcrop_modal", locals: {field: method, object: @object, jcrop_options: jcrop_options})
+          template.render(partial: "active_admin_jcrop/jcrop_modal", locals: {field: method, object: @object, jcrop_options: jcrop_options, style_to_crop: options[:style_to_crop]})
         else
           ''
         end

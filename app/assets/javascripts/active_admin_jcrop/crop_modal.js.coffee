@@ -12,6 +12,7 @@ window.active_admin_jcrop =
           object_id: image.data('objectId')
           crop_field: image.data('cropField')
           jcropper_url: image.data('jcropperUrl')
+          style_to_crop: image.data('styleToCrop')
 
         $(content).appendTo('body').dialog
           width: content.width() 

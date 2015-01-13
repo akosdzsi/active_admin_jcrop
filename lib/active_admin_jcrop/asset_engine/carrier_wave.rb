@@ -5,7 +5,7 @@ module ActiveAdminJcrop
         obj.class.uploaders[field.to_sym].versions.keys
       end
 
-      def crop!(obj, field)
+      def crop!(obj, field, style_to_crop=nil)
         obj.send(field).recreate_versions!
       end
     end
